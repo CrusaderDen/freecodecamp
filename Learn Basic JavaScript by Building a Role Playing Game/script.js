@@ -148,6 +148,9 @@ function goFight () {
 
 }
 
+function attack () {}
+function dodge () {}
+
 function sellWeapon () {
  if (inventory.length>1) {
    gold+=15
