@@ -186,11 +186,16 @@ function attack () {
    health -= getMonsterAttackValue(monsters[fighting].level);
    if (isMonsterHit() ) {
       monsterHealth -= weapons[currentWeapon].power
+   } else {
+      text.innerText += " You miss."
    }
    if (health<=0){
       lose()
    } else if (monsterHealth<=0) {
       fighting === 2 ? winGame() : defeatMonster()
+   }
+   if (Math.random() <= .1) {
+      text.innerText += " Your " + inventory.pop() + " breaks."
    }
 }
 
@@ -198,6 +203,10 @@ function getMonsterAttackValue (level){
    const hit = (level * 5) - (Math.floor(Math.random() * xp));
    console.log(hit)
    return hit > 0 ? hit : 0
+}
+
+function isMonsterHit () {
+   return Math.random() > 0.2 || health <20;
 }
 
 function dodge () {
