@@ -184,7 +184,9 @@ function attack () {
    text.innerText = "The " + monsters[fighting].name + " attacks."
    text.innerText += " You attack it with your " + weapons[currentWeapon].name + "."
    health -= getMonsterAttackValue(monsters[fighting].level);
-   monsterHealth -= weapons[currentWeapon].power
+   if (isMonsterHit() ) {
+      monsterHealth -= weapons[currentWeapon].power
+   }
    if (health<=0){
       lose()
    } else if (monsterHealth<=0) {
@@ -194,6 +196,8 @@ function attack () {
 
 function getMonsterAttackValue (level){
    const hit = (level * 5) - (Math.floor(Math.random() * xp));
+   console.log(hit)
+   return hit > 0 ? hit : 0
 }
 
 function dodge () {
