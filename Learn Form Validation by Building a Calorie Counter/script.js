@@ -48,6 +48,9 @@ function clearForm () {
    for (let i = 0; i<inputContainers.length; i++) {
       inputContainers[i].innerHTML = ''
    }
+   budgetNumberInput.value = ''
+   output.innerText =''
+   output.classList.add('hide')
 }
 
 function calculateCalories(e) {
@@ -80,3 +83,4 @@ function calculateCalories(e) {
 
 addEntryButton.addEventListener("click", addEntry)
 calorieCounter.addEventListener('submit',calculateCalories )
+clearButton.addEventListener('click', clearForm)
