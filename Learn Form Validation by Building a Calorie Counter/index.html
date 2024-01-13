@@ -8,47 +8,47 @@
 </head>
 <body>
    <main>
-      <h1>Calorie Counter</h1>
+      <h1>Учет калорий</h1>
       <div class="container">
          <form id="calorie-counter">
-            <label for="budget">Budget</label>
-            <input id="budget" type="number" min="0" placeholder="Daily calorie budget" required>
+            <label for="budget">Целевой уровень</label>
+            <input id="budget" type="number" min="0" placeholder="Калории" required>
             <fieldset id="breakfast">
-               <legend>Breakfast</legend>
+               <legend>Завтрак</legend>
                <div class="input-container"></div>
             </fieldset>
             <fieldset id="lunch">
-               <legend>Lunch</legend>
+               <legend>Обед</legend>
                <div class="input-container"></div>
             </fieldset>
             <fieldset id="dinner">
-               <legend>Dinner</legend>
+               <legend>Ужин</legend>
                <div class="input-container"></div>
             </fieldset>
             <fieldset id="snacks">
-               <legend>Snacks</legend>
+               <legend>Перекусы</legend>
                <div class="input-container"></div>
             </fieldset>
             <fieldset id="exercise">
-               <legend>Exercise</legend>
+               <legend>Упражнения</legend>
                <div class="input-container"></div>
             </fieldset>
             <div class="controls">
                <span>
-                  <label for="entry-dropdown">Add food or exercise:</label>
+                  <label for="entry-dropdown">Добавить еду или упражнение:</label>
                   <select name="options" id="entry-dropdown">
-                     <option value="breakfast" selected>Breakfast</option>
-                     <option value="lunch">Lunch</option>
-                     <option value="dinner">Dinner</option>
-                     <option value="snacks">Snacks</option>
-                     <option value="exercise">Exercise</option>
+                     <option value="breakfast" selected>Завтрак</option>
+                     <option value="lunch">Обед</option>
+                     <option value="dinner">Ужин</option>
+                     <option value="snacks">Перекусы</option>
+                     <option value="exercise">Упражнения</option>
                   </select>
-                  <button id="add-entry" type="button">Add Entry</button>
+                  <button id="add-entry" type="button">Добавить</button>
                </span>
             </div>
             <div>
-               <button type="submit">Calculate Remaining Calories</button>
-               <button type="button" id="clear">Clear</button>
+               <button type="submit">Расчитать</button>
+               <button type="button" id="clear">Очистить</button>
             </div>
             <div id="output" class="output hide"></div>
          </form>

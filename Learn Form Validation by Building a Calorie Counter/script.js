@@ -20,10 +20,10 @@ function addEntry() {
    const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`)
    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length + 1
    const HTMLString = `
-      <label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>
-      <input type="text" placeholder="Name" id="${entryDropdown.value}-${entryNumber}-name">
-      <label for="${entryDropdown.value}-${entryNumber}-calories">Entry ${entryNumber} Calories</label>
-      <input type="number" min="0" placeholder="Calories" id="${entryDropdown.value}-${entryNumber}-calories">
+      <label for="${entryDropdown.value}-${entryNumber}-name">Введите блюдо ${entryNumber}</label>
+      <input type="text" placeholder="Название" id="${entryDropdown.value}-${entryNumber}-name">
+      <label for="${entryDropdown.value}-${entryNumber}-calories">Введите калорийность ${entryNumber}</label>
+      <input type="number" min="0" placeholder="Калории" id="${entryDropdown.value}-${entryNumber}-calories">
    `
    targetInputContainer.insertAdjacentHTML("beforeend", HTMLString)
 }
@@ -70,13 +70,13 @@ function calculateCalories(e) {
    if (isError) return
    const consumedCalories = breakfastCalories+lunchCalories+dinnerCalories+snacksCalories
    const remainingCalories = budgetCalories-consumedCalories+exerciseCalories
-   const surplusOrDeficit = remainingCalories < 0 ? 'Surplus' : 'Deficit'
+   const surplusOrDeficit = remainingCalories < 0 ? 'Переел(а)' : 'Недоел(а)'
    output.innerHTML = `
-   <span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>
+   <span class="${surplusOrDeficit.toLowerCase()}">Калорий ${surplusOrDeficit}: ${Math.abs(remainingCalories)}</span>
    <hr>
-   <p>${budgetCalories} Calories Budgeted</p>
-   <p>${consumedCalories} Calories Consumed</p>
-   <p>${exerciseCalories} Calories Burned</p>
+   <p>${budgetCalories} Целевой уровень калорий</p>
+   <p>${consumedCalories} Потреблено калорий</p>
+   <p>${exerciseCalories} Израсходовано калорий</p>
    `
    output.classList.remove('hide')
 }
