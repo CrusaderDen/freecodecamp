@@ -71,8 +71,9 @@ function calculateCalories(e) {
    const consumedCalories = breakfastCalories+lunchCalories+dinnerCalories+snacksCalories
    const remainingCalories = budgetCalories-consumedCalories+exerciseCalories
    const surplusOrDeficit = remainingCalories < 0 ? 'Переел(а)' : 'Недоел(а)'
+   const surplusOrDeficitClass = surplusOrDeficit =='Переел(а)' ? 'surplus' : 'deficit'
    output.innerHTML = `
-   <span class="${surplusOrDeficit.toLowerCase()}">Калорий ${surplusOrDeficit}: ${Math.abs(remainingCalories)}</span>
+   <span class="${surplusOrDeficitClass.toLowerCase()}">Калорий ${surplusOrDeficit}: ${Math.abs(remainingCalories)}</span>
    <hr>
    <p>${budgetCalories} Целевой уровень калорий</p>
    <p>${consumedCalories} Потреблено калорий</p>

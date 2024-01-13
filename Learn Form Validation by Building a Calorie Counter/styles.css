@@ -85,10 +85,10 @@
    font-size: 1.2em;
  }
  
- .surplus {
+ .deficit {
    color: var(--light-green);
  }
  
- .deficit {
+ .surplus {
    color: var(--light-pink);
  }
