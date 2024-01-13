@@ -12,5 +12,10 @@ function cleanInputString (str) {
 }
 
 function isInvalidInput (str) {
-   const regex = /e/
+   const regex = /\d+e\d+/i
+   return str.match(regex)
+}
+
+function addEntry () {
+   const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`)
 }
