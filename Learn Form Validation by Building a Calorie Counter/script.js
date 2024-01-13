@@ -20,9 +20,9 @@ function addEntry() {
    const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`)
    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length + 1
    const HTMLString = `
-      <label for="${entryDropdown.value}-${entryNumber}-name">Введите блюдо ${entryNumber}</label>
+      <label for="${entryDropdown.value}-${entryNumber}-name">Название ${entryNumber}</label>
       <input type="text" placeholder="Название" id="${entryDropdown.value}-${entryNumber}-name">
-      <label for="${entryDropdown.value}-${entryNumber}-calories">Введите калорийность ${entryNumber}</label>
+      <label for="${entryDropdown.value}-${entryNumber}-calories">Калорийность ${entryNumber}</label>
       <input type="number" min="0" placeholder="Калории" id="${entryDropdown.value}-${entryNumber}-calories">
    `
    targetInputContainer.insertAdjacentHTML("beforeend", HTMLString)
