@@ -1,50 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>IT-incubator</title>
    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
    <h1 id="title">IT-incubator - Песочница</h1>
    <p id="description">Прежде чем начать прохождение отбора, заполните следующую анкету:</p>
    <form id="survey-form">
-      <label for="name" id="name-label">Имя</label>
-      <input type="text" id="name" required placeholder="Name">
-      <label for="email" id="email-label">Email</label>
-      <input type="email" id="email" required placeholder="E-mail">
-      <label for="number" id="number-label">Возраст (опционально)</label>
-      <input type="number" id="number" min="5" max="150" placeholder="Age">
-      <label for="dropdown" id="select-name">Как вы планируете обучаться?</label>
-      <select id="dropdown">
-         <option value="soft">Фуллтайм, ничего не мешает</option>
-         <option value="middle">После работы. Нет семейных обязанностей и детей</option>
-         <option value="hard">После работы, есть семья и маленькие дети.</option>
-      </select>
+
+      <div class="personal-data">
+         <label for="name" id="name-label">Имя</label>
+         <input type="text" id="name" required placeholder="Введите ваше имя">
+         <label for="email" id="email-label">Email</label>
+         <input type="email" id="email" required placeholder="Введите ваш е-майл">
+         <label for="number" id="number-label">Возраст (опционально)</label>
+         <input type="number" id="number" min="5" max="150" placeholder="Введите ваш возраст">
+      </div>
+      <div class="timing">
+         <label for="dropdown" id="select-name">Как вы планируете обучаться?</label>
+         <select id="dropdown">
+            <option disabled selected value="soft">-Выберете вариант-</option>
+            <option value="soft">Фуллтайм, ничего не мешает</option>
+            <option value="middle">После работы. Нет семейных обязанностей и детей</option>
+            <option value="hard">После работы, есть семья и маленькие дети.</option>
+         </select>
+      </div>
       <div>
-      <p>Какое из наших курсов вас заинтересовал?</p>
-      <label for="radio-1">Фронтенд</label>
-      <input type="radio" name="form-radio" id="radio-1" checked>
-      <label for="radio-2">Бекенд</label>
-      <input type="radio" name="form-radio" id="radio-2">
-      <label for="radio-3">Стажировка</label>
-      <input type="radio" name="form-radio" id="radio-3">
-   </div>
-   <div>
-      <p>Откуда Вы узнали про "Инкубатор"?</p>
-      <label for="checkbox-1">Канал Димыча на ютубе</label>
-      <input type="checkbox" id="checkbox-1" value="chanel">
-      <label for="checkbox-1">Советы друзей, которые учились у нас</label>
-      <input type="checkbox" id="checkbox-1" value="referal">
-      <label for="checkbox-1">Контекстная реклама в интернете</label>
-      <input type="checkbox" id="checkbox-1" value="reklama">
-   </div>
-   <div>
-      <p>Напишите, сколько Вы уже занимаетесь самостоятельно и что успели изучить.</p>
-      <textarea name="textarea" cols="30" rows="10"></textarea>
-   </div>
-   <button type="submit" id="submit"></button>
+         <p>Какое из наших курсов вас заинтересовал?</p>
+         <div>
+            <input type="radio" name="form-radio" id="radio-1" value="front" checked>
+            <label for="radio-1">Фронтенд</label>
+         </div>
+         <div>
+            <input type="radio" name="form-radio" id="radio-2" value="back">
+            <label for="radio-2">Бекенд</label>
+         </div>
+         <div>
+         <input type="radio" name="form-radio" id="radio-3" value="train">
+         <label for="radio-3">Стажировка</label>
+      </div>
+      </div>
+      <div>
+         <p>Откуда Вы узнали про "Инкубатор"?</p>
+         <div>
+            <input type="checkbox" id="checkbox-1" value="chanel">
+            <label for="checkbox-1">Канал Димыча на ютубе</label>
+         </div>
+         <div>
+            <input type="checkbox" id="checkbox-1" value="referal">
+            <label for="checkbox-1">Советы друзей, которые учились у нас</label>
+         </div>
+         <div>
+            <input type="checkbox" id="checkbox-1" value="reklama">
+            <label for="checkbox-1">Контекстная реклама в интернете</label>
+         </div>
+      </div>
+      <div class="text-area">
+         <p>Напишите, сколько Вы уже занимаетесь самостоятельно и что успели изучить.</p>
+         <textarea name="textarea"></textarea>
+      </div>
+      <button type="submit" id="submit">Отправить</button>
    </form>
 </body>
+
 </html>

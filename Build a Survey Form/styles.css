@@ -1,0 +1,82 @@
+html,
+body {
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   box-sizing: border-box;
+   margin: 0;
+   background-color: #dbcdcd;
+   color: #313131;
+}
+
+h1 {
+   text-align: center;
+   font-weight: 700;
+   font-size: 34px;
+}
+
+#description {
+   text-align: center;
+   font-weight: 500;
+   font-size: 28px;
+}
+
+#survey-form {
+   max-width: 800px;
+   margin: 20px auto;
+   padding: 20px;
+   background: linear-gradient(180deg, #668cda, #688acf, #6989ca);
+   font-size: 24px;
+   border-radius: 10px;
+}
+
+input,
+select {
+   height: 40px;
+   vertical-align: middle;
+   border-radius: 5px;
+   margin-right: 20px;
+}
+
+label {
+   vertical-align: middle;
+}
+
+input::placeholder,
+select::placeholder {
+   padding-left: 3px;
+   color: #a6a6a6;
+   font-size: 14px;
+}
+
+.personal-data,
+.timing {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin-bottom: 50px;
+}
+
+option {
+   font-size: 20px;
+   margin-bottom: 20px;
+   line-height: 40px;
+}
+
+.text-area {
+   padding-right: 20px;
+}
+
+textarea {
+   width: 100%;
+   height: 200px;
+   margin-bottom: 30px;
+}
+
+button {
+   display: block;
+   width: 200px;
+   height: 50px;
+   margin: 0 auto;
+   font-size: 24px;
+   font-weight: 500;
+   border-radius: 5px;
+}
