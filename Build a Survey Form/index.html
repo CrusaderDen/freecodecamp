@@ -4,6 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>IT-incubator</title>
+   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
    <h1 id="title">IT-incubator - Песочница</h1>
@@ -21,6 +22,29 @@
          <option value="middle">После работы. Нет семейных обязанностей и детей</option>
          <option value="hard">После работы, есть семья и маленькие дети.</option>
       </select>
+      <div>
+      <p>Какое из наших курсов вас заинтересовал?</p>
+      <label for="radio-1">Фронтенд</label>
+      <input type="radio" name="form-radio" id="radio-1" checked>
+      <label for="radio-2">Бекенд</label>
+      <input type="radio" name="form-radio" id="radio-2">
+      <label for="radio-3">Стажировка</label>
+      <input type="radio" name="form-radio" id="radio-3">
+   </div>
+   <div>
+      <p>Откуда Вы узнали про "Инкубатор"?</p>
+      <label for="checkbox-1">Канал Димыча на ютубе</label>
+      <input type="checkbox" id="checkbox-1" value="chanel">
+      <label for="checkbox-1">Советы друзей, которые учились у нас</label>
+      <input type="checkbox" id="checkbox-1" value="referal">
+      <label for="checkbox-1">Контекстная реклама в интернете</label>
+      <input type="checkbox" id="checkbox-1" value="reklama">
+   </div>
+   <div>
+      <p>Напишите, сколько Вы уже занимаетесь самостоятельно и что успели изучить.</p>
+      <textarea name="textarea" cols="30" rows="10"></textarea>
+   </div>
+   <button type="submit" id="submit"></button>
    </form>
 </body>
 </html>
